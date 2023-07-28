@@ -9,6 +9,7 @@ import Heatmap from "./components/Heatmap.vue";
 import Kpi from "./components/Kpi.vue";
 import Tag from "./components/Tag.vue";
 import ConversionTunnel from "./components/ConversionTunnel.vue";
+const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 const routes = [
     {
@@ -54,7 +55,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory(),
+    history: createWebHistory(BASE_URL),
     routes,
 });
 
